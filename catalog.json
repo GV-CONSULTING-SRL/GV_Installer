@@ -1,7 +1,7 @@
 {
   "versione": "1.0.0",
-  "versione_framework": "1.13.9",
-  "aggiornato_il": "2026-06-29",
+  "versione_framework": "1.13.10",
+  "aggiornato_il": "2026-06-30",
   "moduli": [
     {
       "id": "smartbuy",
@@ -431,7 +431,7 @@
       "id": "notification",
       "nome": "GV NotificationHub",
       "descrizione": "Hub di notifiche per l'ecosistema GV: alert da moduli e connettori verso Telegram, email (SMTP/Graph), Teams e Slack, email dirette, storico su SQL Server e scheduler notifiche Concept (stored XSN_*).",
-      "versione": "1.1.11",
+      "versione": "1.1.12",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Notifications",
@@ -453,7 +453,7 @@
         "Scheduler notifiche Concept: esecuzione stored XSN_* a giri o orari fissi",
         "Configuratore notifiche Concept via API /api/concept/*"
       ],
-      "aggiornato_il": "2026-06-29"
+      "aggiornato_il": "2026-06-30"
     },
     {
       "id": "gv_productionhub",
