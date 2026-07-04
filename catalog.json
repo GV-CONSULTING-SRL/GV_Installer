@@ -140,7 +140,8 @@
                                       "exe_name":  "OfficeAutomation.exe",
                                       "env_extra":  [
                                                         "OA_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_OfficeAutomation;User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
-                                                        "FRAMEWORK_BASE_URL=http://localhost:3001"
+                                                        "FRAMEWORK_BASE_URL=http://localhost:3001",
+                                                        "PUBBLICO_BASE_URL=https://planner.gvconsulting.eu"
                                                     ]
                                   },
                        "funzionalita":  [
