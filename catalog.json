@@ -427,7 +427,7 @@
                        "id":  "mes_integrator",
                        "nome":  "MES Integrator",
                        "descrizione":  "MES produzione â€” gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-                       "versione":  "1.23.0",
+                       "versione":  "1.24.0",
                        "autore":  "GV Consulting",
                        "categoria":  "Produzione",
                        "icona":  "PrecisionManufacturing",
