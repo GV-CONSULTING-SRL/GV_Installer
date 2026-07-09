@@ -1,7 +1,7 @@
-﻿{
+{
     "versione":  "1.0.0",
-    "versione_framework":  "1.13.13",
-    "aggiornato_il":  "2026-06-30",
+    "versione_framework":  "1.14.0",
+    "aggiornato_il":  "2026-07-06",
     "moduli":  [
                    {
                        "id":  "smartbuy",
@@ -123,7 +123,7 @@
                        "id":  "officeautomation",
                        "nome":  "Office Automation",
                        "descrizione":  "Automazione processi documentali e ufficio",
-                       "versione":  "1.5.24",
+                       "versione":  "1.9.1",
                        "autore":  "GV Consulting",
                        "categoria":  "Produttivita",
                        "icona":  "Description",
