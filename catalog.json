@@ -117,7 +117,7 @@
       "id": "officeautomation",
       "nome": "Office Automation",
       "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.9.3",
+      "versione": "1.9.4",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Description",
@@ -137,9 +137,10 @@
         ]
       },
       "funzionalita": [
-        "Dashboard"
+        "Dashboard",
+        "Esporta/Importa dati"
       ],
-      "aggiornato_il": "2026-06-26"
+      "aggiornato_il": "2026-07-10"
     },
     {
       "id": "costupdater",
@@ -399,7 +400,7 @@
       "id": "mes_integrator",
       "nome": "MES Integrator",
       "descrizione": "MES produzione â€” gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "1.26.3",
+      "versione": "1.27.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
