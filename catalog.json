@@ -1,7 +1,7 @@
 {
   "versione": "1.0.0",
-  "versione_framework": "1.14.2",
-  "aggiornato_il": "2026-07-10",
+  "versione_framework": "1.14.3",
+  "aggiornato_il": "2026-07-13",
   "moduli": [
     {
       "id": "smartbuy",
@@ -117,7 +117,7 @@
       "id": "officeautomation",
       "nome": "Office Automation",
       "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.9.4",
+      "versione": "1.9.7",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Description",
@@ -400,7 +400,7 @@
       "id": "mes_integrator",
       "nome": "MES Integrator",
       "descrizione": "MES produzione â€” gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "1.31.0",
+      "versione": "1.32.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
@@ -433,7 +433,7 @@
       "id": "notification",
       "nome": "GV NotificationHub",
       "descrizione": "Hub di notifiche per l'ecosistema GV: alert da moduli e connettori verso Telegram, email (SMTP/Graph), Teams e Slack, email dirette, storico su SQL Server e scheduler notifiche Concept (stored XSN_*).",
-      "versione": "1.1.16",
+      "versione": "1.1.17",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Notifications",
