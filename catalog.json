@@ -213,7 +213,7 @@
                        "id":  "connettorevision",
                        "nome":  "Connettore Vision",
                        "descrizione":  "Esportazione movimenti contabili (MOV_CON) da Concept verso Vision API. Gestione stati CO/EX, preview JSON, invio singolo e massivo.",
-                       "versione":  "1.7.3",
+                       "versione":  "1.7.4",
                        "autore":  "GV Consulting",
                        "categoria":  "Contabilita",
                        "icona":  "Receipt",
