@@ -1,487 +1,521 @@
-{
-  "versione": "1.0.0",
-  "versione_framework": "1.14.3",
-  "aggiornato_il": "2026-07-13",
-  "moduli": [
-    {
-      "id": "smartbuy",
-      "nome": "GV SmartBuy",
-      "descrizione": "Gestione RDA, ordini fornitori, lamiere e magazzino. Integrazione con Concept ERP per ciclo acquisti completo.",
-      "versione": "1.5.17",
-      "autore": "GV Consulting",
-      "categoria": "Acquisti",
-      "icona": "ShoppingCart",
-      "porta_default": 5200,
-      "url_health_local": "http://localhost:5200",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_SmartBuy",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-SmartBuy",
-        "repo_name": "GV_SmartBuy",
-        "proj_path": "SmartBuy",
-        "exe_name": "SmartBuy.exe"
-      },
-      "funzionalita": [
-        "Richieste di Acquisto (RDA)",
-        "Ordini fornitori con approvazione",
-        "Gestione lamiere e taglio",
-        "Magazzino ricambi",
-        "Integrazione Concept ERP"
-      ]
-    },
-    {
-      "id": "importcad3d",
-      "nome": "Import CAD 3D",
-      "descrizione": "Importa distinte base da file Excel CAD 3D in Concept ERP. Genera articoli, distinte, fasi di produzione e record ICO_CAM automaticamente.",
-      "versione": "2.9.4",
-      "autore": "GV Consulting",
-      "categoria": "Produzione",
-      "icona": "TableChart",
-      "porta_default": 5201,
-      "url_health_local": "http://localhost:5201",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_ImportCad3D",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-ImportCad3D",
-        "repo_name": "GV_ImportCad3D",
-        "proj_path": "ImportCad3D",
-        "exe_name": "ImportCad3D.exe"
-      },
-      "funzionalita": [
-        "Import distinte base da Excel",
-        "Generazione articoli e fasi in Concept",
-        "Scheduler automatico su cartella di rete",
-        "Viewer Excel da percorso UNC",
-        "Gestione mapping ICO_CAM"
-      ]
-    },
-    {
-      "id": "salvagnini_ops",
-      "nome": "Salvagnini OPS",
-      "descrizione": "Elabora i file XML prodotti dalla macchina Salvagnini, raggruppa per order_code e genera file OPS per il software di nesting.",
-      "versione": "2.13.6",
-      "autore": "GV Consulting",
-      "categoria": "Produzione",
-      "icona": "Receipt",
-      "porta_default": 5202,
-      "url_health_local": "http://localhost:5202",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_SalvagniniOPS",
-      "dipendenze": [
-        "importcad3d"
-      ],
-      "deploy": {
-        "service_name": "GV-SalvagniniOPS",
-        "repo_name": "GV_SalvagniniOPS",
-        "proj_path": "SalvagniniOPS",
-        "exe_name": "SalvagniniOPS.exe"
-      },
-      "funzionalita": [
-        "Raggruppamento XML per order_code",
-        "Arricchimento con dati ICO_CAM",
-        "Generazione file OPS per nesting",
-        "Archivio automatico file elaborati",
-        "Log elaborazioni con dettaglio ordini"
-      ]
-    },
-    {
-      "id": "speedcost",
-      "nome": "SpeedCost",
-      "descrizione": "Preventivazione carpenteria metallica. Calcolo costi materiali, fasi interne/esterne, accessori e margini con formule personalizzabili.",
-      "versione": "1.0.0",
-      "autore": "GV Consulting",
-      "categoria": "Commerciale",
-      "icona": "Calculate",
-      "porta_default": 5203,
-      "url_health_local": "http://localhost:5203",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_SpeedCost",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-SpeedCost",
-        "repo_name": "GV_SpeedCost",
-        "proj_path": "SpeedCost",
-        "exe_name": "SpeedCost.exe"
-      },
-      "funzionalita": [
-        "Preventivi carpenteria metallica",
-        "Calcolo costi materiali (lamiere, inox, alluminio)",
-        "Fasi di lavorazione interne ed esterne",
-        "Accessori e componenti aggiuntivi",
-        "Listini prezzi personalizzabili per azienda",
-        "Dashboard KPI con grafici",
-        "Integrazione VIES (auto-compilazione P.IVA)",
-        "Integrazione Synx MES",
-        "Invio email preventivi"
-      ]
-    },
-    {
-      "id": "officeautomation",
-      "nome": "Office Automation",
-      "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.9.7",
-      "autore": "GV Consulting",
-      "categoria": "Produttivita",
-      "icona": "Description",
-      "porta_default": 5204,
-      "url_health_local": "http://localhost:5204",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_OfficeAutomation",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-OfficeAutomation",
-        "repo_name": "GV_OfficeAutomation",
-        "proj_path": "OfficeAutomation",
-        "exe_name": "OfficeAutomation.exe",
-        "env_extra": [
-          "OA_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_OfficeAutomation;User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
-          "FRAMEWORK_BASE_URL=http://localhost:3001",
-          "PUBBLICO_BASE_URL=https://planner.gvconsulting.eu"
-        ]
-      },
-      "funzionalita": [
-        "Dashboard",
-        "Esporta/Importa dati"
-      ],
-      "aggiornato_il": "2026-07-10"
-    },
-    {
-      "id": "costupdater",
-      "nome": "Cost Update Service",
-      "descrizione": "Aggiornamento automatico costi documenti derivati da offerte Concept ERP. Confronta offerte con ordini/packing/DDT e propaga le variazioni economiche a cascata.",
-      "versione": "1.0.4",
-      "autore": "GV Consulting",
-      "categoria": "Commerciale",
-      "icona": "CompareArrows",
-      "porta_default": 5206,
-      "url_health_local": "http://localhost:5206",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_CostUpdateService",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-CostUpdateService",
-        "repo_name": "GV_CostUpdateService",
-        "proj_path": ".",
-        "exe_name": "GV_CostUpdateService.exe"
-      },
-      "funzionalita": [
-        "Rilevamento anomalie offerte vs documenti derivati",
-        "Aggiornamento a cascata OFF > ORD > PCK > DDT",
-        "Scheduler automatico per aggiornamento periodico",
-        "Log completo delle modifiche con audit trail",
-        "Verifica integrita stored procedure (SP Sync)",
-        "Configurazione soglie e campi da controllare per azienda"
-      ]
-    },
-    {
-      "id": "gv_insighthub",
-      "nome": "GV InsightHub",
-      "descrizione": "Dashboard KPI, pivot interattive e analisi dati su Vendite, Acquisti e Produzione da Concept ERP.",
-      "versione": "1.8.19",
-      "autore": "GV Consulting",
-      "categoria": "Business Intelligence",
-      "icona": "BarChart",
-      "porta_default": 5207,
-      "url_health_local": "http://localhost:5207",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_InsightHub",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-InsightHub",
-        "repo_name": "GV_InsightHub",
-        "proj_path": "backend",
-        "exe_name": "GV_BI_Concept.exe"
-      },
-      "funzionalita": [
-        "Dashboard KPI vendite/acquisti/produzione",
-        "Pivot interattive cliente x mese",
-        "Top clienti, articoli, fornitori",
-        "Andamento mensile fatturato e margini",
-        "Analisi produzione con kg, scarti, ore",
-        "Cache configurabile per performance"
-      ],
-      "aggiornato_il": "2026-06-12"
-    },
-    {
-      "id": "connettorevision",
-      "nome": "Connettore Vision",
-      "descrizione": "Esportazione movimenti contabili (MOV_CON) da Concept verso Vision API. Gestione stati CO/EX, preview JSON, invio singolo e massivo.",
-      "versione": "1.6.9",
-      "autore": "GV Consulting",
-      "categoria": "Contabilita",
-      "icona": "Receipt",
-      "porta_default": 5205,
-      "url_health_local": "http://localhost:5205",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_ConnettoreVision",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-ConnettoreVision",
-        "repo_name": "GV_ConnettoreVision",
-        "proj_path": "ConnettoreVision",
-        "exe_name": "ConnettoreVision.exe"
-      },
-      "funzionalita": [
-        "Esportazione movimenti contabili verso Vision",
-        "Preview JSON prima dell'invio",
-        "Invio singolo e massivo",
-        "Ripristino movimenti esportati",
-        "Configurazione Vision API per azienda",
-        "Log operazioni di esportazione"
-      ],
-      "aggiornato_il": "2026-07-10"
-    },
-    {
-      "id": "connectorpassepartout",
-      "nome": "Connettore Passepartout",
-      "descrizione": "Connettore WebAPI Passepartout/Mexal. Estrazione anagrafiche controparti (clienti/fornitori), anagrafica unica e articoli. Passthrough generico verso tutte le risorse del gestionale.",
-      "versione": "0.1.0",
-      "autore": "GV Consulting",
-      "categoria": "Anagrafiche",
-      "icona": "Badge",
-      "porta_default": 5215,
-      "url_health_local": "http://localhost:5215",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_ConnectorPassepartout",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-ConnectorPassepartout",
-        "repo_name": "GV_ConnectorPassepartout",
-        "proj_path": "ConnectorPassepartout",
-        "exe_name": "ConnectorPassepartout.exe"
-      },
-      "funzionalita": [
-        "Estrazione clienti e fornitori dalle WebAPI Passepartout",
-        "Anagrafica unica: CRUD, ricerca per codice fiscale, storicizzazione",
-        "Estrazione articoli",
-        "Passthrough generico verso qualsiasi risorsa WebAPI",
-        "Configurazione accesso WebAPI per azienda (locale/LIVE)",
-        "Log operazioni"
-      ]
-    },
-    {
-      "id": "packinglist",
-      "nome": "GV PackingList",
-      "descrizione": "Lettura packing list da Albatros (DB NTP) e creazione automatica documenti di vendita in Concept ERP (A01_DOC_VEN). Configurabile per tipo documento (causale, serie, tipo).",
-      "versione": "1.0.50",
-      "autore": "GV Consulting",
-      "categoria": "Vendite",
-      "icona": "Inventory2",
-      "porta_default": 5208,
-      "url_health_local": "http://localhost:5208",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_PackingList",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-PackingList",
-        "repo_name": "GV_PackingList",
-        "proj_path": "GV_PackingList",
-        "exe_name": "GV_PackingList.exe"
-      },
-      "funzionalita": [
-        "Lettura packing list da Albatros (NTP)",
-        "Creazione documenti A01_DOC_VEN idempotente",
-        "Inserimento righe A01_DOC_VER da documento modello",
-        "Configurazione per tipo documento (causale, serie, tipo Concept)",
-        "Scheduler automatico con intervallo configurabile",
-        "Log operazioni con filtri per entitÃ  e operazione"
-      ]
-    },
-    {
-      "id": "crosscheck",
-      "nome": "GV CrossCheck",
-      "descrizione": "Confronto automatico DDT Concept vs Fatture Ad Hoc per fornitore, con abbinamento per Partita IVA e export Excel.",
-      "versione": "1.0.13",
-      "autore": "GV Consulting",
-      "categoria": "Contabilita",
-      "icona": "CompareArrows",
-      "porta_default": 5210,
-      "url_health_local": "http://localhost:5210",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_Crosscheck",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-Crosscheck",
-        "repo_name": "GV_Crosscheck",
-        "proj_path": "Crosscheck",
-        "exe_name": "Crosscheck.exe",
-        "env_extra": [
-          "MT_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database={slug};User Id=sa;Password={DB_PASS};TrustServerCertificate=True"
-        ]
-      },
-      "funzionalita": [
-        "Confronto DDT Concept vs Fatture Ad Hoc per fornitore",
-        "Abbinamento per Partita IVA (primario) + nome normalizzato (fallback)",
-        "Supporto conto lavoro/terzisti con causali CTL configurabili",
-        "Filtro per data documento fornitore (non data di registrazione)",
-        "Export risultati in CSV apribile in Excel",
-        "Drill-down per fornitore con dettaglio documenti",
-        "Mappature manuali nomi fornitore",
-        "Note e verifica righe",
-        "Log operazioni"
-      ]
-    },
-    {
-      "id": "designmind",
-      "nome": "DesignMind",
-      "descrizione": "Analisi disegni CAD con AI Claude e import automatico BOM in Concept ERP",
-      "versione": "1.5.37",
-      "autore": "GV Consulting",
-      "categoria": "Produzione",
-      "icona": "AutoFixHigh",
-      "porta_default": 5211,
-      "url_health_local": "http://localhost:5211",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_DesignMind",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-DesignMind",
-        "repo_name": "GV_DesignMind",
-        "proj_path": "DesignMind",
-        "exe_name": "DesignMind.exe"
-      },
-      "funzionalita": [
-        "Analisi disegni PDF/DXF con Claude Vision AI",
-        "Classificazione automatica componenti (lamiera, commerciale, profilo, assieme)",
-        "Estrazione cartiglio, geometria, BOM gerarchica",
-        "Parsing DXF Inventor (custom properties)",
-        "Stima tempi lavorazione (taglio laser, piegatura, sbavatura, assemblaggio)",
-        "Import automatico articoli e distinte base in Concept ERP",
-        "Creazione preventivi da analisi",
-        "Mapping configurabile classi/fasi verso Concept",
-        "Streaming progresso analisi via SSE"
-      ]
-    },
-    {
-      "id": "work_hub",
-      "nome": "GV WorkHub",
-      "descrizione": "Gestione presenze, analisi ore e sincronizzazione calendario Concept",
-      "versione": "1.0.0",
-      "autore": "GV Consulting",
-      "categoria": "Risorse Umane",
-      "icona": "WorkHistory",
-      "porta_default": 5213,
-      "url_health_local": "http://localhost:5213",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_WorkHub",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-WorkHub",
-        "repo_name": "GV_WorkHub",
-        "proj_path": "WorkHub",
-        "exe_name": "WorkHub.exe"
-      },
-      "funzionalita": [
-        "Dashboard",
-        "Log operazioni",
-        "Impostazioni per azienda"
-      ]
-    },
-    {
-      "id": "amadalinkpro",
-      "nome": "GV AmadaLinkPro Connect",
-      "descrizione": "Connettore standalone Amada Machine Link â†’ Concept ERP. Riceve metriche, eventi e nesting completati dalle macchine Amada, aggiorna la produzione su Concept, con dashboard analitica tempo previsto/effettivo.",
-      "versione": "1.0.0",
-      "autore": "GV Consulting",
-      "categoria": "Produzione",
-      "icona": "PrecisionManufacturing",
-      "porta_default": 7000,
-      "url_health_local": "http://localhost:7000",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_AmadaLinkPro_Connect",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-AmadaLinkPro",
-        "repo_name": "GV_AmadaLinkPro_Connect",
-        "proj_path": "AmadaLinkProConnect",
-        "exe_name": "AmadaLinkProConnect.exe",
-        "env_extra": []
-      },
-      "funzionalita": [
-        "Ricezione dati Amada Machine Link (metriche, eventi, nesting)",
-        "Aggiornamento produzione Concept ERP via APIA01",
-        "Dashboard con grafici tempo previsto vs effettivo",
-        "Confronto fogli richiesti vs prodotti con % completamento",
-        "Bonifica periodica FLQTB (safety-net)",
-        "Riconsuntiva schedulata fasi ODP",
-        "Alert macchine silenziose",
-        "Log strutturato errori e nesting"
-      ]
-    },
-    {
-      "id": "mes_integrator",
-      "nome": "MES Integrator",
-      "descrizione": "MES produzione â€” gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "1.32.0",
-      "autore": "GV Consulting",
-      "categoria": "Produzione",
-      "icona": "PrecisionManufacturing",
-      "porta_default": 5214,
-      "url_health_local": "http://localhost:5214",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_MesIntegrator",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-MesIntegrator",
-        "repo_name": "GV_MesIntegrator",
-        "proj_path": "MesIntegrator",
-        "exe_name": "MesIntegrator.exe",
-        "env_extra": [
-          "MES_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_MesIntegrator;User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
-          "MT_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database={slug};User Id=sa;Password={DB_PASS};TrustServerCertificate=True"
-        ]
-      },
-      "funzionalita": [
-        "Gestione piani di lavoro (start, stop, dichiarazione)",
-        "Ripartizione corretta fasi condivise tra piani",
-        "Vista contesto fase ODP con piani fratelli",
-        "Pre-STOP con semaforo (verde/giallo/rosso)",
-        "Riconciliazione automatica PRQTB desincronizzati",
-        "Frontend standalone touch-first per operatori",
-        "Audit log completo operazioni",
-        "Login operatore con PIN/badge"
-      ]
-    },
-    {
-      "id": "notification",
-      "nome": "GV NotificationHub",
-      "descrizione": "Hub di notifiche per l'ecosistema GV: alert da moduli e connettori verso Telegram, email (SMTP/Graph), Teams e Slack, email dirette, storico su SQL Server e scheduler notifiche Concept (stored XSN_*).",
-      "versione": "1.1.17",
-      "autore": "GV Consulting",
-      "categoria": "Produttivita",
-      "icona": "Notifications",
-      "porta_default": 5209,
-      "url_health_local": "http://localhost:5209",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_NotificationHub",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV_NotificationHub",
-        "repo_name": "GV_NotificationHub",
-        "proj_path": "GV_NotificationHub",
-        "exe_name": "GV_NotificationHub.exe"
-      },
-      "funzionalita": [
-        "Alert con throttling anti-spam da moduli e connettori GV_Service40",
-        "Broadcast su Telegram, email SMTP/Microsoft Graph, Teams, Slack",
-        "Email dirette via POST /api/send-email",
-        "Storico notifiche su SQL Server con API /api/history",
-        "Scheduler notifiche Concept: esecuzione stored XSN_* a giri o orari fissi",
-        "Configuratore notifiche Concept via API /api/concept/*"
-      ],
-      "aggiornato_il": "2026-07-10"
-    },
-    {
-      "id": "gv_productionhub",
-      "nome": "GV ProductionHub",
-      "descrizione": "Monitoraggio della produzione da Concept ERP: ordini di produzione in ritardo, gerarchia ODP padre/figlio, fasi e scheda ritardi cliente.",
-      "versione": "0.1.1",
-      "autore": "GV Consulting",
-      "categoria": "Produzione",
-      "icona": "PrecisionManufacturing",
-      "porta_default": 5208,
-      "url_health_local": "http://localhost:5208",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_ProductionHub",
-      "dipendenze": [],
-      "deploy": {
-        "service_name": "GV-ProductionHub",
-        "repo_name": "GV_ProductionHub",
-        "proj_path": "backend",
-        "exe_name": "GV_ProductionHub.exe"
-      },
-      "funzionalita": [
-        "Ordini di produzione in ritardo con semaforo gravita",
-        "Gerarchia ODP padre/figlio (componenti)",
-        "Scheda ritardi per cliente (riferimenti, fasi, allegati)",
-        "Fasi di avanzamento ODP",
-        "Allegati PDF anagrafica articolo"
-      ]
-    }
-  ]
+﻿{
+    "versione":  "1.0.0",
+    "versione_framework":  "1.14.3",
+    "aggiornato_il":  "2026-07-15",
+    "moduli":  [
+                   {
+                       "id":  "smartbuy",
+                       "nome":  "GV SmartBuy",
+                       "descrizione":  "Gestione RDA, ordini fornitori, lamiere e magazzino. Integrazione con Concept ERP per ciclo acquisti completo.",
+                       "versione":  "1.5.17",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Acquisti",
+                       "icona":  "ShoppingCart",
+                       "porta_default":  5200,
+                       "url_health_local":  "http://localhost:5200",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_SmartBuy",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-SmartBuy",
+                                      "repo_name":  "GV_SmartBuy",
+                                      "proj_path":  "SmartBuy",
+                                      "exe_name":  "SmartBuy.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Richieste di Acquisto (RDA)",
+                                            "Ordini fornitori con approvazione",
+                                            "Gestione lamiere e taglio",
+                                            "Magazzino ricambi",
+                                            "Integrazione Concept ERP"
+                                        ]
+                   },
+                   {
+                       "id":  "importcad3d",
+                       "nome":  "Import CAD 3D",
+                       "descrizione":  "Importa distinte base da file Excel CAD 3D in Concept ERP. Genera articoli, distinte, fasi di produzione e record ICO_CAM automaticamente.",
+                       "versione":  "2.9.4",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Produzione",
+                       "icona":  "TableChart",
+                       "porta_default":  5201,
+                       "url_health_local":  "http://localhost:5201",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_ImportCad3D",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-ImportCad3D",
+                                      "repo_name":  "GV_ImportCad3D",
+                                      "proj_path":  "ImportCad3D",
+                                      "exe_name":  "ImportCad3D.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Import distinte base da Excel",
+                                            "Generazione articoli e fasi in Concept",
+                                            "Scheduler automatico su cartella di rete",
+                                            "Viewer Excel da percorso UNC",
+                                            "Gestione mapping ICO_CAM"
+                                        ]
+                   },
+                   {
+                       "id":  "salvagnini_ops",
+                       "nome":  "Salvagnini OPS",
+                       "descrizione":  "Elabora i file XML prodotti dalla macchina Salvagnini, raggruppa per order_code e genera file OPS per il software di nesting.",
+                       "versione":  "2.13.6",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Produzione",
+                       "icona":  "Receipt",
+                       "porta_default":  5202,
+                       "url_health_local":  "http://localhost:5202",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_SalvagniniOPS",
+                       "dipendenze":  [
+                                          "importcad3d"
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-SalvagniniOPS",
+                                      "repo_name":  "GV_SalvagniniOPS",
+                                      "proj_path":  "SalvagniniOPS",
+                                      "exe_name":  "SalvagniniOPS.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Raggruppamento XML per order_code",
+                                            "Arricchimento con dati ICO_CAM",
+                                            "Generazione file OPS per nesting",
+                                            "Archivio automatico file elaborati",
+                                            "Log elaborazioni con dettaglio ordini"
+                                        ]
+                   },
+                   {
+                       "id":  "speedcost",
+                       "nome":  "SpeedCost",
+                       "descrizione":  "Preventivazione carpenteria metallica. Calcolo costi materiali, fasi interne/esterne, accessori e margini con formule personalizzabili.",
+                       "versione":  "1.0.0",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Commerciale",
+                       "icona":  "Calculate",
+                       "porta_default":  5203,
+                       "url_health_local":  "http://localhost:5203",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_SpeedCost",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-SpeedCost",
+                                      "repo_name":  "GV_SpeedCost",
+                                      "proj_path":  "SpeedCost",
+                                      "exe_name":  "SpeedCost.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Preventivi carpenteria metallica",
+                                            "Calcolo costi materiali (lamiere, inox, alluminio)",
+                                            "Fasi di lavorazione interne ed esterne",
+                                            "Accessori e componenti aggiuntivi",
+                                            "Listini prezzi personalizzabili per azienda",
+                                            "Dashboard KPI con grafici",
+                                            "Integrazione VIES (auto-compilazione P.IVA)",
+                                            "Integrazione Synx MES",
+                                            "Invio email preventivi"
+                                        ]
+                   },
+                   {
+                       "id":  "officeautomation",
+                       "nome":  "Office Automation",
+                       "descrizione":  "Automazione processi documentali e ufficio",
+                       "versione":  "1.9.7",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Produttivita",
+                       "icona":  "Description",
+                       "porta_default":  5204,
+                       "url_health_local":  "http://localhost:5204",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_OfficeAutomation",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-OfficeAutomation",
+                                      "repo_name":  "GV_OfficeAutomation",
+                                      "proj_path":  "OfficeAutomation",
+                                      "exe_name":  "OfficeAutomation.exe",
+                                      "env_extra":  [
+                                                        "OA_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_OfficeAutomation;User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
+                                                        "FRAMEWORK_BASE_URL=http://localhost:3001",
+                                                        "PUBBLICO_BASE_URL=https://planner.gvconsulting.eu"
+                                                    ]
+                                  },
+                       "funzionalita":  [
+                                            "Dashboard",
+                                            "Esporta/Importa dati"
+                                        ],
+                       "aggiornato_il":  "2026-07-10"
+                   },
+                   {
+                       "id":  "costupdater",
+                       "nome":  "Cost Update Service",
+                       "descrizione":  "Aggiornamento automatico costi documenti derivati da offerte Concept ERP. Confronta offerte con ordini/packing/DDT e propaga le variazioni economiche a cascata.",
+                       "versione":  "1.0.4",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Commerciale",
+                       "icona":  "CompareArrows",
+                       "porta_default":  5206,
+                       "url_health_local":  "http://localhost:5206",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_CostUpdateService",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-CostUpdateService",
+                                      "repo_name":  "GV_CostUpdateService",
+                                      "proj_path":  ".",
+                                      "exe_name":  "GV_CostUpdateService.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Rilevamento anomalie offerte vs documenti derivati",
+                                            "Aggiornamento a cascata OFF \u003e ORD \u003e PCK \u003e DDT",
+                                            "Scheduler automatico per aggiornamento periodico",
+                                            "Log completo delle modifiche con audit trail",
+                                            "Verifica integrita stored procedure (SP Sync)",
+                                            "Configurazione soglie e campi da controllare per azienda"
+                                        ]
+                   },
+                   {
+                       "id":  "gv_insighthub",
+                       "nome":  "GV InsightHub",
+                       "descrizione":  "Dashboard KPI, pivot interattive e analisi dati su Vendite, Acquisti e Produzione da Concept ERP.",
+                       "versione":  "1.8.19",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Business Intelligence",
+                       "icona":  "BarChart",
+                       "porta_default":  5207,
+                       "url_health_local":  "http://localhost:5207",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_InsightHub",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-InsightHub",
+                                      "repo_name":  "GV_InsightHub",
+                                      "proj_path":  "backend",
+                                      "exe_name":  "GV_BI_Concept.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Dashboard KPI vendite/acquisti/produzione",
+                                            "Pivot interattive cliente x mese",
+                                            "Top clienti, articoli, fornitori",
+                                            "Andamento mensile fatturato e margini",
+                                            "Analisi produzione con kg, scarti, ore",
+                                            "Cache configurabile per performance"
+                                        ],
+                       "aggiornato_il":  "2026-06-12"
+                   },
+                   {
+                       "id":  "connettorevision",
+                       "nome":  "Connettore Vision",
+                       "descrizione":  "Esportazione movimenti contabili (MOV_CON) da Concept verso Vision API. Gestione stati CO/EX, preview JSON, invio singolo e massivo.",
+                       "versione":  "1.7.2",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Contabilita",
+                       "icona":  "Receipt",
+                       "porta_default":  5205,
+                       "url_health_local":  "http://localhost:5205",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_ConnettoreVision",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-ConnettoreVision",
+                                      "repo_name":  "GV_ConnettoreVision",
+                                      "proj_path":  "ConnettoreVision",
+                                      "exe_name":  "ConnettoreVision.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Esportazione movimenti contabili verso Vision",
+                                            "Preview JSON prima dell\u0027invio",
+                                            "Invio singolo e massivo",
+                                            "Ripristino movimenti esportati",
+                                            "Configurazione Vision API per azienda",
+                                            "Log operazioni di esportazione"
+                                        ],
+                       "aggiornato_il":  "2026-07-15"
+                   },
+                   {
+                       "id":  "connectorpassepartout",
+                       "nome":  "Connettore Passepartout",
+                       "descrizione":  "Connettore WebAPI Passepartout/Mexal. Estrazione anagrafiche controparti (clienti/fornitori), anagrafica unica e articoli. Passthrough generico verso tutte le risorse del gestionale.",
+                       "versione":  "0.1.0",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Anagrafiche",
+                       "icona":  "Badge",
+                       "porta_default":  5215,
+                       "url_health_local":  "http://localhost:5215",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_ConnectorPassepartout",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-ConnectorPassepartout",
+                                      "repo_name":  "GV_ConnectorPassepartout",
+                                      "proj_path":  "ConnectorPassepartout",
+                                      "exe_name":  "ConnectorPassepartout.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Estrazione clienti e fornitori dalle WebAPI Passepartout",
+                                            "Anagrafica unica: CRUD, ricerca per codice fiscale, storicizzazione",
+                                            "Estrazione articoli",
+                                            "Passthrough generico verso qualsiasi risorsa WebAPI",
+                                            "Configurazione accesso WebAPI per azienda (locale/LIVE)",
+                                            "Log operazioni"
+                                        ]
+                   },
+                   {
+                       "id":  "packinglist",
+                       "nome":  "GV PackingList",
+                       "descrizione":  "Lettura packing list da Albatros (DB NTP) e creazione automatica documenti di vendita in Concept ERP (A01_DOC_VEN). Configurabile per tipo documento (causale, serie, tipo).",
+                       "versione":  "1.0.50",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Vendite",
+                       "icona":  "Inventory2",
+                       "porta_default":  5208,
+                       "url_health_local":  "http://localhost:5208",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_PackingList",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-PackingList",
+                                      "repo_name":  "GV_PackingList",
+                                      "proj_path":  "GV_PackingList",
+                                      "exe_name":  "GV_PackingList.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Lettura packing list da Albatros (NTP)",
+                                            "Creazione documenti A01_DOC_VEN idempotente",
+                                            "Inserimento righe A01_DOC_VER da documento modello",
+                                            "Configurazione per tipo documento (causale, serie, tipo Concept)",
+                                            "Scheduler automatico con intervallo configurabile",
+                                            "Log operazioni con filtri per entitÃƒÂ  e operazione"
+                                        ]
+                   },
+                   {
+                       "id":  "crosscheck",
+                       "nome":  "GV CrossCheck",
+                       "descrizione":  "Confronto automatico DDT Concept vs Fatture Ad Hoc per fornitore, con abbinamento per Partita IVA e export Excel.",
+                       "versione":  "1.0.13",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Contabilita",
+                       "icona":  "CompareArrows",
+                       "porta_default":  5210,
+                       "url_health_local":  "http://localhost:5210",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_Crosscheck",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-Crosscheck",
+                                      "repo_name":  "GV_Crosscheck",
+                                      "proj_path":  "Crosscheck",
+                                      "exe_name":  "Crosscheck.exe",
+                                      "env_extra":  [
+                                                        "MT_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database={slug};User Id=sa;Password={DB_PASS};TrustServerCertificate=True"
+                                                    ]
+                                  },
+                       "funzionalita":  [
+                                            "Confronto DDT Concept vs Fatture Ad Hoc per fornitore",
+                                            "Abbinamento per Partita IVA (primario) + nome normalizzato (fallback)",
+                                            "Supporto conto lavoro/terzisti con causali CTL configurabili",
+                                            "Filtro per data documento fornitore (non data di registrazione)",
+                                            "Export risultati in CSV apribile in Excel",
+                                            "Drill-down per fornitore con dettaglio documenti",
+                                            "Mappature manuali nomi fornitore",
+                                            "Note e verifica righe",
+                                            "Log operazioni"
+                                        ]
+                   },
+                   {
+                       "id":  "designmind",
+                       "nome":  "DesignMind",
+                       "descrizione":  "Analisi disegni CAD con AI Claude e import automatico BOM in Concept ERP",
+                       "versione":  "1.5.37",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Produzione",
+                       "icona":  "AutoFixHigh",
+                       "porta_default":  5211,
+                       "url_health_local":  "http://localhost:5211",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_DesignMind",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-DesignMind",
+                                      "repo_name":  "GV_DesignMind",
+                                      "proj_path":  "DesignMind",
+                                      "exe_name":  "DesignMind.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Analisi disegni PDF/DXF con Claude Vision AI",
+                                            "Classificazione automatica componenti (lamiera, commerciale, profilo, assieme)",
+                                            "Estrazione cartiglio, geometria, BOM gerarchica",
+                                            "Parsing DXF Inventor (custom properties)",
+                                            "Stima tempi lavorazione (taglio laser, piegatura, sbavatura, assemblaggio)",
+                                            "Import automatico articoli e distinte base in Concept ERP",
+                                            "Creazione preventivi da analisi",
+                                            "Mapping configurabile classi/fasi verso Concept",
+                                            "Streaming progresso analisi via SSE"
+                                        ]
+                   },
+                   {
+                       "id":  "work_hub",
+                       "nome":  "GV WorkHub",
+                       "descrizione":  "Gestione presenze, analisi ore e sincronizzazione calendario Concept",
+                       "versione":  "1.0.0",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Risorse Umane",
+                       "icona":  "WorkHistory",
+                       "porta_default":  5213,
+                       "url_health_local":  "http://localhost:5213",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_WorkHub",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-WorkHub",
+                                      "repo_name":  "GV_WorkHub",
+                                      "proj_path":  "WorkHub",
+                                      "exe_name":  "WorkHub.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Dashboard",
+                                            "Log operazioni",
+                                            "Impostazioni per azienda"
+                                        ]
+                   },
+                   {
+                       "id":  "amadalinkpro",
+                       "nome":  "GV AmadaLinkPro Connect",
+                       "descrizione":  "Connettore standalone Amada Machine Link Ã¢â€ â€™ Concept ERP. Riceve metriche, eventi e nesting completati dalle macchine Amada, aggiorna la produzione su Concept, con dashboard analitica tempo previsto/effettivo.",
+                       "versione":  "1.0.0",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Produzione",
+                       "icona":  "PrecisionManufacturing",
+                       "porta_default":  7000,
+                       "url_health_local":  "http://localhost:7000",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_AmadaLinkPro_Connect",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-AmadaLinkPro",
+                                      "repo_name":  "GV_AmadaLinkPro_Connect",
+                                      "proj_path":  "AmadaLinkProConnect",
+                                      "exe_name":  "AmadaLinkProConnect.exe",
+                                      "env_extra":  [
+
+                                                    ]
+                                  },
+                       "funzionalita":  [
+                                            "Ricezione dati Amada Machine Link (metriche, eventi, nesting)",
+                                            "Aggiornamento produzione Concept ERP via APIA01",
+                                            "Dashboard con grafici tempo previsto vs effettivo",
+                                            "Confronto fogli richiesti vs prodotti con % completamento",
+                                            "Bonifica periodica FLQTB (safety-net)",
+                                            "Riconsuntiva schedulata fasi ODP",
+                                            "Alert macchine silenziose",
+                                            "Log strutturato errori e nesting"
+                                        ]
+                   },
+                   {
+                       "id":  "mes_integrator",
+                       "nome":  "MES Integrator",
+                       "descrizione":  "MES produzione Ã¢â‚¬â€ gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
+                       "versione":  "1.32.0",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Produzione",
+                       "icona":  "PrecisionManufacturing",
+                       "porta_default":  5214,
+                       "url_health_local":  "http://localhost:5214",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_MesIntegrator",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-MesIntegrator",
+                                      "repo_name":  "GV_MesIntegrator",
+                                      "proj_path":  "MesIntegrator",
+                                      "exe_name":  "MesIntegrator.exe",
+                                      "env_extra":  [
+                                                        "MES_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_MesIntegrator;User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
+                                                        "MT_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database={slug};User Id=sa;Password={DB_PASS};TrustServerCertificate=True"
+                                                    ]
+                                  },
+                       "funzionalita":  [
+                                            "Gestione piani di lavoro (start, stop, dichiarazione)",
+                                            "Ripartizione corretta fasi condivise tra piani",
+                                            "Vista contesto fase ODP con piani fratelli",
+                                            "Pre-STOP con semaforo (verde/giallo/rosso)",
+                                            "Riconciliazione automatica PRQTB desincronizzati",
+                                            "Frontend standalone touch-first per operatori",
+                                            "Audit log completo operazioni",
+                                            "Login operatore con PIN/badge"
+                                        ]
+                   },
+                   {
+                       "id":  "notification",
+                       "nome":  "GV NotificationHub",
+                       "descrizione":  "Hub di notifiche per l\u0027ecosistema GV: alert da moduli e connettori verso Telegram, email (SMTP/Graph), Teams e Slack, email dirette, storico su SQL Server e scheduler notifiche Concept (stored XSN_*).",
+                       "versione":  "1.1.17",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Produttivita",
+                       "icona":  "Notifications",
+                       "porta_default":  5209,
+                       "url_health_local":  "http://localhost:5209",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_NotificationHub",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV_NotificationHub",
+                                      "repo_name":  "GV_NotificationHub",
+                                      "proj_path":  "GV_NotificationHub",
+                                      "exe_name":  "GV_NotificationHub.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Alert con throttling anti-spam da moduli e connettori GV_Service40",
+                                            "Broadcast su Telegram, email SMTP/Microsoft Graph, Teams, Slack",
+                                            "Email dirette via POST /api/send-email",
+                                            "Storico notifiche su SQL Server con API /api/history",
+                                            "Scheduler notifiche Concept: esecuzione stored XSN_* a giri o orari fissi",
+                                            "Configuratore notifiche Concept via API /api/concept/*"
+                                        ],
+                       "aggiornato_il":  "2026-07-10"
+                   },
+                   {
+                       "id":  "gv_productionhub",
+                       "nome":  "GV ProductionHub",
+                       "descrizione":  "Monitoraggio della produzione da Concept ERP: ordini di produzione in ritardo, gerarchia ODP padre/figlio, fasi e scheda ritardi cliente.",
+                       "versione":  "0.1.1",
+                       "autore":  "GV Consulting",
+                       "categoria":  "Produzione",
+                       "icona":  "PrecisionManufacturing",
+                       "porta_default":  5208,
+                       "url_health_local":  "http://localhost:5208",
+                       "url_repo":  "https://github.com/GV-CONSULTING-SRL/GV_ProductionHub",
+                       "dipendenze":  [
+
+                                      ],
+                       "deploy":  {
+                                      "service_name":  "GV-ProductionHub",
+                                      "repo_name":  "GV_ProductionHub",
+                                      "proj_path":  "backend",
+                                      "exe_name":  "GV_ProductionHub.exe"
+                                  },
+                       "funzionalita":  [
+                                            "Ordini di produzione in ritardo con semaforo gravita",
+                                            "Gerarchia ODP padre/figlio (componenti)",
+                                            "Scheda ritardi per cliente (riferimenti, fasi, allegati)",
+                                            "Fasi di avanzamento ODP",
+                                            "Allegati PDF anagrafica articolo"
+                                        ]
+                   }
+               ]
 }
