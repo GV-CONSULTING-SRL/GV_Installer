@@ -1,13 +1,13 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.15.7",
+  "versione_framework": "1.15.8",
   "aggiornato_il": "2026-07-28",
   "moduli": [
     {
       "id": "smartbuy",
       "nome": "GV SmartBuy",
       "descrizione": "Gestione RDA, ordini fornitori, lamiere e magazzino. Integrazione con Concept ERP per ciclo acquisti completo.",
-      "versione": "1.5.17",
+      "versione": "1.5.18",
       "autore": "GV Consulting",
       "categoria": "Acquisti",
       "icona": "ShoppingCart",
@@ -59,7 +59,7 @@
       "id": "salvagnini_ops",
       "nome": "Salvagnini OPS",
       "descrizione": "Elabora i file XML prodotti dalla macchina Salvagnini, raggruppa per order_code e genera file OPS per il software di nesting.",
-      "versione": "2.13.7",
+      "versione": "2.14.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "Receipt",
@@ -117,7 +117,7 @@
       "id": "officeautomation",
       "nome": "Office Automation",
       "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.9.32",
+      "versione": "1.9.33",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Description",
@@ -140,7 +140,7 @@
         "Dashboard",
         "Esporta/Importa dati"
       ],
-      "aggiornato_il": "2026-07-26"
+      "aggiornato_il": "2026-07-28"
     },
     {
       "id": "costupdater",
