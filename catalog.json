@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.15.14",
-  "aggiornato_il": "2026-08-01",
+  "versione_framework": "1.16.0",
+  "aggiornato_il": "2026-08-04",
   "moduli": [
     {
       "id": "smartbuy",
@@ -400,7 +400,7 @@
       "id": "mes_integrator",
       "nome": "MES Integrator",
       "descrizione": "MES produzione Ã¢â‚¬â€ gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "2.4.0",
+      "versione": "2.6.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
