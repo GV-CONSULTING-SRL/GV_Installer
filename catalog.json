@@ -1,6 +1,6 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.16.0",
+  "versione_framework": "1.17.0",
   "aggiornato_il": "2026-08-04",
   "moduli": [
     {
@@ -59,7 +59,7 @@
       "id": "salvagnini_ops",
       "nome": "Salvagnini OPS",
       "descrizione": "Elabora i file XML prodotti dalla macchina Salvagnini, raggruppa per order_code e genera file OPS per il software di nesting.",
-      "versione": "2.17.0",
+      "versione": "2.19.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "Receipt",
@@ -117,7 +117,7 @@
       "id": "officeautomation",
       "nome": "Office Automation",
       "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.9.34",
+      "versione": "1.10.0",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Description",
@@ -140,7 +140,7 @@
         "Dashboard",
         "Esporta/Importa dati"
       ],
-      "aggiornato_il": "2026-07-28"
+      "aggiornato_il": "2026-08-05"
     },
     {
       "id": "costupdater",
@@ -173,7 +173,7 @@
       "id": "gv_insighthub",
       "nome": "GV InsightHub",
       "descrizione": "Dashboard KPI, pivot interattive e analisi dati su Vendite, Acquisti e Produzione da Concept ERP.",
-      "versione": "1.8.19",
+      "versione": "1.12.0",
       "autore": "GV Consulting",
       "categoria": "Business Intelligence",
       "icona": "BarChart",
@@ -195,7 +195,7 @@
         "Analisi produzione con kg, scarti, ore",
         "Cache configurabile per performance"
       ],
-      "aggiornato_il": "2026-06-12"
+      "aggiornato_il": "2026-08-04"
     },
     {
       "id": "connettorevision",
