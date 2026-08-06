@@ -59,7 +59,7 @@
       "id": "salvagnini_ops",
       "nome": "Salvagnini OPS",
       "descrizione": "Elabora i file XML prodotti dalla macchina Salvagnini, raggruppa per order_code e genera file OPS per il software di nesting.",
-      "versione": "2.19.0",
+      "versione": "2.19.1",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "Receipt",
