@@ -1,6 +1,6 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.20.1",
+  "versione_framework": "1.26.1",
   "aggiornato_il": "2026-08-07",
   "moduli": [
     {
@@ -59,7 +59,7 @@
       "id": "salvagnini_ops",
       "nome": "Salvagnini OPS",
       "descrizione": "Elabora i file XML prodotti dalla macchina Salvagnini, raggruppa per order_code e genera file OPS per il software di nesting.",
-      "versione": "2.19.1",
+      "versione": "2.20.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "Receipt",
@@ -283,7 +283,7 @@
       "id": "crosscheck",
       "nome": "GV CrossCheck",
       "descrizione": "Confronto automatico DDT Concept vs Fatture Ad Hoc per fornitore, con abbinamento per Partita IVA e export Excel.",
-      "versione": "1.0.13",
+      "versione": "1.0.15",
       "autore": "GV Consulting",
       "categoria": "Contabilita",
       "icona": "CompareArrows",
@@ -400,7 +400,7 @@
       "id": "mes_integrator",
       "nome": "MES Integrator",
       "descrizione": "MES produzione Ã¢â‚¬â€ gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "2.14.0",
+      "versione": "2.20.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
