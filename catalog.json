@@ -1,6 +1,6 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.20.0",
+  "versione_framework": "1.20.1",
   "aggiornato_il": "2026-08-07",
   "moduli": [
     {
@@ -33,7 +33,7 @@
       "id": "importcad3d",
       "nome": "Import CAD 3D",
       "descrizione": "Importa distinte base da file Excel CAD 3D in Concept ERP. Genera articoli, distinte, fasi di produzione e record ICO_CAM automaticamente.",
-      "versione": "2.10.1",
+      "versione": "2.10.2",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "TableChart",
