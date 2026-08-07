@@ -1,6 +1,6 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.19.5",
+  "versione_framework": "1.20.0",
   "aggiornato_il": "2026-08-07",
   "moduli": [
     {
@@ -33,7 +33,7 @@
       "id": "importcad3d",
       "nome": "Import CAD 3D",
       "descrizione": "Importa distinte base da file Excel CAD 3D in Concept ERP. Genera articoli, distinte, fasi di produzione e record ICO_CAM automaticamente.",
-      "versione": "2.10.0",
+      "versione": "2.10.1",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "TableChart",
@@ -400,7 +400,7 @@
       "id": "mes_integrator",
       "nome": "MES Integrator",
       "descrizione": "MES produzione Ã¢â‚¬â€ gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "2.11.1",
+      "versione": "2.14.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
