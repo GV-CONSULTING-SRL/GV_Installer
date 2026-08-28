@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
   "versione_framework": "1.37.1",
-  "aggiornato_il": "2026-08-27",
+  "aggiornato_il": "2026-08-28",
   "moduli": [
     {
       "id": "smartbuy",
@@ -117,7 +117,7 @@
       "id": "officeautomation",
       "nome": "Office Automation",
       "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.14.0",
+      "versione": "1.16.0",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Description",
@@ -140,7 +140,7 @@
         "Dashboard",
         "Esporta/Importa dati"
       ],
-      "aggiornato_il": "2026-08-05"
+      "aggiornato_il": "2026-08-28"
     },
     {
       "id": "costupdater",
