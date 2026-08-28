@@ -4,6 +4,33 @@
   "aggiornato_il": "2026-08-28",
   "moduli": [
     {
+      "id": "warehub",
+      "nome": "GV Warehub",
+      "descrizione": "Logistica di magazzino: unità di carico, pallettizzazione, ubicazioni e generazione dei documenti di evasione. Si integra con GV MES Integrator e con Concept ERP.",
+      "versione": "0.2.0",
+      "autore": "GV Consulting",
+      "categoria": "Logistica",
+      "icona": "Warehouse",
+      "porta_default": 5215,
+      "url_health_local": "http://localhost:5215",
+      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_Warehub",
+      "dipendenze": [],
+      "deploy": {
+        "service_name": "GV-Warehub",
+        "repo_name": "GV_Warehub",
+        "proj_path": "Warehub",
+        "exe_name": "Warehub.exe"
+      },
+      "funzionalita": [
+        "Unità di carico con annidamento: un bancale composto da più contenitori",
+        "Carico dalla fase di produzione: articolo, quantità e ordine si derivano dal join",
+        "Il contenitore è un articolo di magazzino, nostro o del cliente in conto deposito",
+        "Packing list su più colli, con lista merce e lista contenitori distinte",
+        "Ubicazioni ad albero e giacenza derivata, mai un saldo scritto a mano",
+        "Documenti provvisori su Concept via API_GV: la conferma resta nel gestionale"
+      ]
+    },
+    {
       "id": "smartbuy",
       "nome": "GV SmartBuy",
       "descrizione": "Gestione RDA, ordini fornitori, lamiere e magazzino. Integrazione con Concept ERP per ciclo acquisti completo.",
