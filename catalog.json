@@ -7,7 +7,7 @@
       "id": "warehub",
       "nome": "GV Warehub",
       "descrizione": "Logistica di magazzino: unità di carico, pallettizzazione, ubicazioni e generazione dei documenti di evasione. Si integra con GV MES Integrator e con Concept ERP.",
-      "versione": "0.3.1",
+      "versione": "0.3.2",
       "autore": "GV Consulting",
       "categoria": "Logistica",
       "icona": "Warehouse",
@@ -19,7 +19,10 @@
         "service_name": "GV-Warehub",
         "repo_name": "GV_Warehub",
         "proj_path": "Warehub",
-        "exe_name": "Warehub.exe"
+        "exe_name": "Warehub.exe",
+        "env_extra": [
+          "WAREHUB_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_Warehub;User Id=sa;Password={DB_PASS};TrustServerCertificate=True"
+        ]
       },
       "funzionalita": [
         "Unità di carico con annidamento: un bancale composto da più contenitori",
