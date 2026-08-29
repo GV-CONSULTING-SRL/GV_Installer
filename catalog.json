@@ -1,13 +1,13 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.38.0",
+  "versione_framework": "1.39.0",
   "aggiornato_il": "2026-08-29",
   "moduli": [
     {
       "id": "warehub",
       "nome": "GV Warehub",
       "descrizione": "Logistica di magazzino: unità di carico, pallettizzazione, ubicazioni e generazione dei documenti di evasione. Si integra con GV MES Integrator e con Concept ERP.",
-      "versione": "0.4.0",
+      "versione": "0.4.1",
       "autore": "GV Consulting",
       "categoria": "Logistica",
       "icona": "Warehouse",
@@ -430,7 +430,7 @@
       "id": "mes_integrator",
       "nome": "MES Integrator",
       "descrizione": "MES produzione Ã¢â‚¬â€ gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "2.28.1",
+      "versione": "2.29.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
