@@ -7,7 +7,7 @@
       "id": "warehub",
       "nome": "GV Warehub",
       "descrizione": "Logistica di magazzino: unità di carico, pallettizzazione, ubicazioni e generazione dei documenti di evasione. Si integra con GV MES Integrator e con Concept ERP.",
-      "versione": "0.2.0",
+      "versione": "0.3.0",
       "autore": "GV Consulting",
       "categoria": "Logistica",
       "icona": "Warehouse",
