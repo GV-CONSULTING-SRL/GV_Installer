@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.41.0",
-  "aggiornato_il": "2026-08-29",
+  "versione_framework": "1.41.1",
+  "aggiornato_il": "2026-08-30",
   "moduli": [
     {
       "id": "warehub",
@@ -37,7 +37,7 @@
       "id": "smartbuy",
       "nome": "GV SmartBuy",
       "descrizione": "Gestione RDA, ordini fornitori, lamiere e magazzino. Integrazione con Concept ERP per ciclo acquisti completo.",
-      "versione": "1.7.0",
+      "versione": "1.7.1",
       "autore": "GV Consulting",
       "categoria": "Acquisti",
       "icona": "ShoppingCart",
