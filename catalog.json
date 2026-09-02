@@ -491,7 +491,7 @@
       "id": "gv_productionhub",
       "nome": "GV ProductionHub",
       "descrizione": "Monitoraggio della produzione da Concept ERP: ordini di produzione in ritardo, storico articolo con costi preventivo/consuntivo, statistiche delle fasi di produzione.",
-      "versione": "0.2.0",
+      "versione": "0.3.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
@@ -503,7 +503,12 @@
         "service_name": "GV-ProductionHub",
         "repo_name": "GV_ProductionHub",
         "proj_path": "backend",
-        "exe_name": "GV_ProductionHub.exe"
+        "exe_name": "GV_ProductionHub.exe",
+        "env_extra": [
+          "CONCEPT_DB_NAME=Concept",
+          "PROD_CACHE_SECONDS=300",
+          "PROD_ODP_RICHIEDI_RIGA_ORDINE=true"
+        ]
       },
       "funzionalita": [
         "Ordini di produzione in ritardo con semaforo gravita",
@@ -514,7 +519,9 @@
         "Storico articolo: venduto, ODP per anno, preventivo vs consuntivo, anomalie di costo",
         "Pesi ripartiti dai nesting e scostamento vs peso reale",
         "Statistiche fasi: ore uomo/macchina/attrezzaggio per lavorazione e operatore",
-        "Performance operatori: consuntivo vs preventivo, scarti, score 0-100"
+        "Performance operatori: consuntivo vs preventivo, scarti, score 0-100",
+        "Vista di appoggio propria: nessuna dipendenza da viste del gestionale",
+        "Diagnostica in linea: dice a che punto del filtro si perdono le righe"
       ],
       "aggiornato_il": "2026-09-02"
     }
