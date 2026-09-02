@@ -203,7 +203,7 @@
       "id": "gv_insighthub",
       "nome": "GV InsightHub",
       "descrizione": "Dashboard KPI, pivot interattive e analisi dati su Vendite, Acquisti e Produzione da Concept ERP.",
-      "versione": "1.17.2",
+      "versione": "1.18.0",
       "autore": "GV Consulting",
       "categoria": "Business Intelligence",
       "icona": "BarChart",
@@ -491,7 +491,7 @@
       "id": "gv_productionhub",
       "nome": "GV ProductionHub",
       "descrizione": "Monitoraggio della produzione da Concept ERP: ordini di produzione in ritardo, storico articolo con costi preventivo/consuntivo, statistiche delle fasi di produzione.",
-      "versione": "0.3.1",
+      "versione": "0.4.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
@@ -507,7 +507,8 @@
         "env_extra": [
           "CONCEPT_DB_NAME=Concept",
           "PROD_CACHE_SECONDS=300",
-          "PROD_ODP_RICHIEDI_RIGA_ORDINE=true"
+          "PROD_ODP_RICHIEDI_RIGA_ORDINE=true",
+          "PROD_ODP_SOLO_PIANIFICATI=false"
         ]
       },
       "funzionalita": [
