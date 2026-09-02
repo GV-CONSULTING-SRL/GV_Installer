@@ -490,8 +490,8 @@
     {
       "id": "gv_productionhub",
       "nome": "GV ProductionHub",
-      "descrizione": "Monitoraggio della produzione da Concept ERP: ordini di produzione in ritardo, gerarchia ODP padre/figlio, fasi e scheda ritardi cliente.",
-      "versione": "0.1.1",
+      "descrizione": "Monitoraggio della produzione da Concept ERP: ordini di produzione in ritardo, storico articolo con costi preventivo/consuntivo, statistiche delle fasi di produzione.",
+      "versione": "0.2.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
@@ -510,7 +510,11 @@
         "Gerarchia ODP padre/figlio (componenti)",
         "Scheda ritardi per cliente (riferimenti, fasi, allegati)",
         "Fasi di avanzamento ODP",
-        "Allegati PDF anagrafica articolo"
+        "Allegati PDF anagrafica articolo",
+        "Storico articolo: venduto, ODP per anno, preventivo vs consuntivo, anomalie di costo",
+        "Pesi ripartiti dai nesting e scostamento vs peso reale",
+        "Statistiche fasi: ore uomo/macchina/attrezzaggio per lavorazione e operatore",
+        "Performance operatori: consuntivo vs preventivo, scarti, score 0-100"
       ]
     }
   ]
