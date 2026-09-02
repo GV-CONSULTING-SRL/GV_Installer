@@ -225,7 +225,7 @@
         "Analisi produzione con kg, scarti, ore",
         "Cache configurabile per performance"
       ],
-      "aggiornato_il": "2026-08-04"
+      "aggiornato_il": "2026-09-01"
     },
     {
       "id": "connettorevision",
@@ -253,7 +253,7 @@
         "Configurazione Vision API per azienda",
         "Log operazioni di esportazione"
       ],
-      "aggiornato_il": "2026-07-15"
+      "aggiornato_il": "2026-07-28"
     },
     {
       "id": "connectorpassepartout",
