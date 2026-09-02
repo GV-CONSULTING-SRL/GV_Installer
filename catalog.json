@@ -203,7 +203,7 @@
       "id": "gv_insighthub",
       "nome": "GV InsightHub",
       "descrizione": "Dashboard KPI, pivot interattive e analisi dati su Vendite, Acquisti e Produzione da Concept ERP.",
-      "versione": "1.17.1",
+      "versione": "1.17.2",
       "autore": "GV Consulting",
       "categoria": "Business Intelligence",
       "icona": "BarChart",
@@ -225,7 +225,7 @@
         "Analisi produzione con kg, scarti, ore",
         "Cache configurabile per performance"
       ],
-      "aggiornato_il": "2026-09-01"
+      "aggiornato_il": "2026-09-02"
     },
     {
       "id": "connettorevision",
