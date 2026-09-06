@@ -1,6 +1,6 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.46.0",
+  "versione_framework": "1.47.0",
   "aggiornato_il": "2026-09-06",
   "moduli": [
     {
@@ -37,7 +37,7 @@
       "id": "smartbuy",
       "nome": "GV SmartBuy",
       "descrizione": "Gestione RDA, ordini fornitori, lamiere e magazzino. Integrazione con Concept ERP per ciclo acquisti completo.",
-      "versione": "1.9.0",
+      "versione": "1.10.0",
       "autore": "GV Consulting",
       "categoria": "Acquisti",
       "icona": "ShoppingCart",
@@ -147,7 +147,7 @@
       "id": "officeautomation",
       "nome": "Office Automation",
       "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.18.5",
+      "versione": "1.18.6",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Description",
