@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.57.1",
-  "aggiornato_il": "2026-09-11",
+  "versione_framework": "1.58.0",
+  "aggiornato_il": "2026-09-12",
   "moduli": [
     {
       "id": "warehub",
