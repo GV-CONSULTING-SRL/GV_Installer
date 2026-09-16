@@ -1,6 +1,6 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.69.1",
+  "versione_framework": "1.72.0",
   "aggiornato_il": "2026-09-16",
   "moduli": [
     {
@@ -525,6 +525,38 @@
         "Diagnostica in linea: dice a che punto del filtro si perdono le righe"
       ],
       "aggiornato_il": "2026-09-02"
+    },
+    {
+      "id": "codifyhub",
+      "nome": "GV CodifyHub",
+      "descrizione": "Codifica automatica di articoli e distinte a salti di livello: dalle righe d'ordine Concept genera la catena completa di codici, legami e fasi, un livello per ogni passaggio conto lavoro.",
+      "versione": "0.2.1",
+      "autore": "GV Consulting",
+      "categoria": "Produzione",
+      "icona": "Category",
+      "porta_default": 5218,
+      "url_health_local": "http://localhost:5218",
+      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_CodifyHub",
+      "dipendenze": [],
+      "deploy": {
+        "service_name": "GV-CodifyHub",
+        "repo_name": "GV_CodifyHub",
+        "proj_path": "CodifyHub",
+        "exe_name": "CodifyHub.exe"
+      },
+      "funzionalita": [
+        "Regola n codici = n fasi esterne + 1: un livello di distinta per ogni passaggio conto lavoro",
+        "Ricerca unica su righe d'ordine Concept e anagrafica articoli, con codifica sulla stessa pagina",
+        "Modalita da ordine e modalita libera, con codice padre nuovo generato dalla maschera",
+        "Anteprima dell'albero senza scrivere niente e senza consumare il progressivo",
+        "Scrittura di articoli, descrizioni multilingua, testate distinta, legami e fasi in Concept",
+        "Lock applicativo SYS_LCK: non sovrascrive chi ha la distinta aperta",
+        "Annullamento della famiglia per chiave logica, con l'elenco di cosa e' stato saltato e perche'",
+        "Maschera del codice configurabile con validazione in tempo reale e contatori riallineabili",
+        "Anagrafica delle fasi esterne: quali lavorazioni sono passaggi conto lavoro",
+        "Gruppo di tabelle Concept configurabile (A01, A02) per provare senza toccare i dati veri"
+      ],
+      "aggiornato_il": "2026-09-16"
     }
   ]
 }
