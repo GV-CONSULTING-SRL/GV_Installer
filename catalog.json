@@ -313,7 +313,7 @@
       "id": "crosscheck",
       "nome": "GV CrossCheck",
       "descrizione": "Confronto automatico DDT Concept vs Fatture Ad Hoc per fornitore, con abbinamento per Partita IVA e export Excel.",
-      "versione": "1.1.3",
+      "versione": "1.1.4",
       "autore": "GV Consulting",
       "categoria": "Contabilita",
       "icona": "CompareArrows",
