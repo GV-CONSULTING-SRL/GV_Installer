@@ -259,7 +259,7 @@
       "id": "connectorpassepartout",
       "nome": "Connettore Passepartout",
       "descrizione": "Connettore WebAPI Passepartout/Mexal. Estrazione anagrafiche controparti (clienti/fornitori), anagrafica unica e articoli. Passthrough generico verso tutte le risorse del gestionale.",
-      "versione": "1.3.0",
+      "versione": "1.4.0",
       "autore": "GV Consulting",
       "categoria": "Anagrafiche",
       "icona": "Badge",
