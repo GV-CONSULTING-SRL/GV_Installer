@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
   "versione_framework": "1.85.0",
-  "aggiornato_il": "2026-09-19",
+  "aggiornato_il": "2026-09-20",
   "moduli": [
     {
       "id": "warehub",
@@ -147,7 +147,7 @@
       "id": "officeautomation",
       "nome": "Office Automation",
       "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.31.0",
+      "versione": "1.38.0",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Description",
@@ -170,7 +170,7 @@
         "Dashboard",
         "Esporta/Importa dati"
       ],
-      "aggiornato_il": "2026-09-18"
+      "aggiornato_il": "2026-09-20"
     },
     {
       "id": "costupdater",
