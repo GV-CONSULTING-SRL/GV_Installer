@@ -562,6 +562,47 @@
         "Gruppo di tabelle Concept configurabile (A01, A02) per provare senza toccare i dati veri"
       ],
       "aggiornato_il": "2026-09-16"
+    },
+    {
+      "id": "prosys_hub",
+      "nome": "GV ProSysHub",
+      "descrizione": "Riservato Profilsystem: dichiarazione delle fasi a bordo della linea Eurogroup P600 via OPC UA, pesata e chiusura dei colli, generazione dei DDT provvisori in Concept ERP, scarti di setup del coil.",
+      "versione": "0.1.1",
+      "autore": "GV Consulting",
+      "categoria": "Produzione",
+      "icona": "PrecisionManufacturing",
+      "porta_default": 5219,
+      "url_health_local": "http://localhost:5219",
+      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_ProSysHub",
+      "dipendenze": [],
+      "deploy": {
+        "service_name": "GV-ProSysHub",
+        "repo_name": "GV_ProSysHub",
+        "proj_path": "backend",
+        "exe_name": "GV_ProSysHub.exe",
+        "env_extra": [
+          "CONCEPT_DB_NAME=Concept",
+          "HMI_DEMO=true",
+          "POSTAZIONE_TOKEN=",
+          "DATAPROTECTION_KEYS_DIR=C:\\ProgramData\\GV\\ProSysHub\\keys",
+          "PESATA_TOLLERANZA_KG=5"
+        ]
+      },
+      "funzionalita": [
+        "Fase Linea sull'HMI: presa in carico della commessa, avvio e chiusura fase, dati grezzi della linea accanto ai calcolati",
+        "Lettura OPC UA dal server Eurogroup, nodi allineati al tracciato del 18/09, piu' macchine configurabili",
+        "Dato grezzo registrato com'e' arrivato su tabella di appoggio, normalizzazione verso l'ERP in un secondo passo",
+        "Allineamento di ODP, fasi e componenti da Concept (A01_ORD_FAS, A01_ORD_COM) con rilevamento delle cancellazioni",
+        "Parametri della barra letti dalla distinta e congelati al lancio della fase",
+        "Scarti dichiarati a controllo, annullabili, e scarti di setup del coil nel calcolo a chiusura ODP",
+        "Pesata Collo: peso teorico da barre, masselli, traversini e reggetta contro la pesata reale, con tolleranza",
+        "Imballi come articoli di magazzino: giacenza residua a ogni prelievo, piu' imballi standard per formato",
+        "Genera DDT: selezione colli, saturazione dei mezzi e documento provvisorio in Concept con una riga per collo",
+        "Configurazione OPC UA in tabella, password cifrata a riposo, prove di lettura dalla pagina",
+        "Login operatore di linea e token di postazione per il pannello WinCC, senza account GV personale",
+        "Dashboard macchine con stato della linea e dei poller"
+      ],
+      "aggiornato_il": "2026-09-20"
     }
   ]
 }
