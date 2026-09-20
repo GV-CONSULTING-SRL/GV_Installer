@@ -494,8 +494,8 @@
     {
       "id": "gv_productionhub",
       "nome": "GV ProductionHub",
-      "descrizione": "Monitoraggio della produzione da Concept ERP: ordini di produzione in ritardo, storico articolo con costi preventivo/consuntivo, statistiche delle fasi di produzione.",
-      "versione": "0.4.0",
+      "descrizione": "Monitoraggio della produzione da Concept ERP: consegne confermate, ordini di produzione in ritardo con distinta e disponibilita', fasi da ultimare, carico per fase, storico articolo, statistiche fasi, non conformita' e postazione MES di reparto.",
+      "versione": "0.5.1",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
@@ -512,23 +512,24 @@
           "CONCEPT_DB_NAME=Concept",
           "PROD_CACHE_SECONDS=300",
           "PROD_ODP_RICHIEDI_RIGA_ORDINE=true",
-          "PROD_ODP_SOLO_PIANIFICATI=false"
+          "PROD_ODP_SOLO_PIANIFICATI=false",
+          "PROD_NC_TABELLA=A01_NON_CON"
         ]
       },
       "funzionalita": [
-        "Ordini di produzione in ritardo con semaforo gravita",
-        "Gerarchia ODP padre/figlio (componenti)",
-        "Scheda ritardi per cliente (riferimenti, fasi, allegati)",
-        "Fasi di avanzamento ODP",
-        "Allegati PDF anagrafica articolo",
-        "Storico articolo: venduto, ODP per anno, preventivo vs consuntivo, anomalie di costo",
-        "Pesi ripartiti dai nesting e scostamento vs peso reale",
-        "Statistiche fasi: ore uomo/macchina/attrezzaggio per lavorazione e operatore",
-        "Performance operatori: consuntivo vs preventivo, scarti, score 0-100",
+        "Consegne Confermate: righe ordine per data confermata, con colonne calendario (giorno, settimana ISO, mese, anno)",
+        "Prod. in Ritardo: ODP scaduti con semaforo gravita, distinta e disponibilita' dei componenti",
+        "Fasi da Ultimare: fasi aperte degli ODP, con l'albero e la fase che blocca",
+        "Carico Fasi: cosa lavorare per fase in una finestra temporale, filtrando per data, codice, ODP o commessa",
+        "Storico Articolo: venduto, ODP per anno, preventivo vs consuntivo, anomalie di costo e pesi dai nesting",
+        "Stat. Fasi: ore uomo/macchina/attrezzaggio per lavorazione e operatore, consuntivo vs preventivo",
+        "Non Conformita': elenco NC con schema della tabella sondato a runtime",
+        "MES Officina: postazione di reparto in modalita' touch",
+        "Range di date su ogni pagina, non classificazioni a periodo",
         "Vista di appoggio propria: nessuna dipendenza da viste del gestionale",
         "Diagnostica in linea: dice a che punto del filtro si perdono le righe"
       ],
-      "aggiornato_il": "2026-09-02"
+      "aggiornato_il": "2026-09-20"
     },
     {
       "id": "codifyhub",
