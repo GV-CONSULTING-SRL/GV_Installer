@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
   "versione_framework": "1.89.0",
-  "aggiornato_il": "2026-09-20",
+  "aggiornato_il": "2026-09-21",
   "moduli": [
     {
       "id": "warehub",
@@ -603,6 +603,39 @@
         "Dashboard macchine con stato della linea e dei poller"
       ],
       "aggiornato_il": "2026-09-20"
+    },
+    {
+      "id": "sdi_filter",
+      "nome": "Filtro SDI",
+      "descrizione": "Filtro dell'archivio fatture elettroniche SDI: legge XML in chiaro, .p7m firmati e .zip, riconosce ragione sociale e partita IVA della controparte e copia in destinazione solo le fatture delle controparti non escluse. Esclusioni dall'anagrafica controparti Concept o inserite a mano, sbloccabili.",
+      "versione": "1.0.3",
+      "autore": "GV Consulting",
+      "categoria": "Contabilita",
+      "icona": "Receipt",
+      "porta_default": 5222,
+      "url_health_local": "http://localhost:5222",
+      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_SdiFilter",
+      "dipendenze": [],
+      "deploy": {
+        "service_name": "GV-SdiFilter",
+        "repo_name": "GV_SdiFilter",
+        "proj_path": "SdiFilter",
+        "exe_name": "SdiFilter.exe"
+      },
+      "funzionalita": [
+        "Lettura delle fatture SDI in tutte le forme in cui arrivano: XML FatturaPA, buste CAdES .p7m firmate, archivi .zip, metadati _MT_ e notifiche",
+        "Controparte riconosciuta in automatico: nota la P.IVA dell'azienda, prende sempre l'altro soggetto, quindi funziona su archivi misti di fatture attive e passive",
+        "Esclusioni pescate dall'anagrafica controparti Concept ({az}_CON_TRO) oppure scritte a mano, con blocco, sblocco e storico",
+        "Criterio di match configurabile con normalizzazione forte di P.IVA e ragione sociale, ripiego sul codice fiscale per chi la P.IVA non ce l'ha",
+        "Anteprima in sola lettura: file per file, cosa verrebbe copiato e cosa fermato, prima di toccare qualsiasi cosa",
+        "Anteprima formattata della singola fattura, .p7m compresi: intestazione, righe, riepilogo IVA, totali, pagamento, allegati e sorgente XML",
+        "Copia atomica in destinazione, mai una sovrascrittura, fattura e metadato copiati in coppia, struttura piatta o per anno/mese o per controparte",
+        "Registro di idempotenza: un file gia' visto non viene riaperto, i duplicati non si ricopiano, gli errori si ritentano al giro dopo",
+        "Baseline sull'archivio storico: si parte da oggi invece di riversare dieci anni di fatture in destinazione",
+        "Passata automatica agli orari configurati piu' il bottone Elabora ora, con lo stesso blocco per azienda e il semaforo di stato dello scheduler",
+        "La cartella di origine non si tocca: niente spostamenti, niente rinomine, nessun file marcatore"
+      ],
+      "aggiornato_il": "2026-09-21"
     }
   ]
 }
