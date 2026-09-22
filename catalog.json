@@ -449,7 +449,8 @@
         "exe_name": "MesIntegrator.exe",
         "env_extra": [
           "MES_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_MesIntegrator;User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
-          "MT_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database={slug};User Id=sa;Password={DB_PASS};TrustServerCertificate=True"
+          "MT_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database={slug};User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
+          "MES_SECRET_KEY={env:MES_SECRET_KEY}"
         ]
       },
       "funzionalita": [
