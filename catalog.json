@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
   "versione_framework": "1.89.0",
-  "aggiornato_il": "2026-09-21",
+  "aggiornato_il": "2026-09-22",
   "moduli": [
     {
       "id": "warehub",
@@ -536,7 +536,7 @@
       "id": "codifyhub",
       "nome": "GV CodifyHub",
       "descrizione": "Codifica automatica di articoli e distinte a salti di livello: dalle righe d'ordine Concept genera la catena completa di codici, legami e fasi, un livello per ogni passaggio conto lavoro.",
-      "versione": "0.6.7",
+      "versione": "0.7.1",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "Category",
