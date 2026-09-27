@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.101.2",
-  "aggiornato_il": "2026-09-24",
+  "versione_framework": "1.135.0",
+  "aggiornato_il": "2026-09-28",
   "moduli": [
     {
       "id": "warehub",
@@ -31,6 +31,36 @@
         "Packing list su più colli, con lista merce e lista contenitori distinte",
         "Ubicazioni ad albero e giacenza derivata, mai un saldo scritto a mano",
         "Documenti provvisori su Concept via API_GV: la conferma resta nel gestionale"
+      ]
+    },
+    {
+      "id": "gv_wms",
+      "nome": "GV WMS",
+      "descrizione": "Magazzino a formati: lamiere e barre come unità fisiche con colata, ritagli, impegni da produzione, documenti e transcodifica da e verso gestionale, MES e CAM.",
+      "versione": "0.22.0",
+      "autore": "GV Consulting",
+      "categoria": "Logistica",
+      "icona": "Warehouse",
+      "porta_default": 5224,
+      "url_health_local": "http://localhost:5224",
+      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_Wms",
+      "dipendenze": [],
+      "deploy": {
+        "service_name": "GV-Wms",
+        "repo_name": "GV_Wms",
+        "proj_path": "Wms",
+        "exe_name": "Wms.exe",
+        "env_extra": [
+          "WMS_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_Wms;User Id=sa;Password={DB_PASS};TrustServerCertificate=True"
+        ]
+      },
+      "funzionalita": [
+        "Fogli, barre e ritagli come unità fisiche con matricola, misure reali e colata",
+        "Transcodifica bidirezionale tra codici generalisti in kg e articoli a formato",
+        "Impegni in due tempi: stima dalla distinta, fogli precisi dopo il nesting",
+        "Documenti con causale per riga e colate con certificato 3.1",
+        "Coda messaggi con gestionale, MES e CAM: idempotente, con ritentativi",
+        "Database dedicato GV_Wms"
       ]
     },
     {
@@ -89,7 +119,7 @@
       "id": "salvagnini_ops",
       "nome": "Salvagnini OPS",
       "descrizione": "Elabora i file XML prodotti dalla macchina Salvagnini, raggruppa per order_code e genera file OPS per il software di nesting.",
-      "versione": "2.25.1",
+      "versione": "2.27.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "Receipt",
@@ -117,37 +147,41 @@
       "id": "speedcost",
       "nome": "SpeedCost",
       "descrizione": "Preventivazione carpenteria metallica. Calcolo costi materiali, fasi interne/esterne, accessori e margini con formule personalizzabili.",
-      "versione": "1.0.0",
+      "versione": "1.5.0",
       "autore": "GV Consulting",
       "categoria": "Commerciale",
       "icona": "Calculate",
       "porta_default": 5203,
       "url_health_local": "http://localhost:5203",
-      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_SpeedCost",
+      "url_repo": "https://github.com/GV-CONSULTING-SRL/SpeedCost",
       "dipendenze": [],
       "deploy": {
         "service_name": "GV-SpeedCost",
-        "repo_name": "GV_SpeedCost",
+        "repo_name": "SpeedCost",
         "proj_path": "SpeedCost",
-        "exe_name": "SpeedCost.exe"
+        "exe_name": "SpeedCost.exe",
+        "env_extra": [
+          "SC_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=SpeedCost;User Id=sa;Password={DB_PASS};TrustServerCertificate=True"
+        ]
       },
       "funzionalita": [
-        "Preventivi carpenteria metallica",
-        "Calcolo costi materiali (lamiere, inox, alluminio)",
-        "Fasi di lavorazione interne ed esterne",
-        "Accessori e componenti aggiuntivi",
-        "Listini prezzi personalizzabili per azienda",
-        "Dashboard KPI con grafici",
-        "Integrazione VIES (auto-compilazione P.IVA)",
-        "Integrazione Synx MES",
-        "Invio email preventivi"
+        "Preventivi carpenteria metallica con calcolo costi riga come SpeedCost 4D",
+        "Materie prime: lamiere, tubolari, profili, inox con extra, sfridi e recupero; misure in mm",
+        "Listini a scaglioni, prezzi inox, prodotti finiti, Smart Form e stati 4D con causali di perdita",
+        "Lavorazioni interne ed esterne, analitica tempi da SigmaNEST (file o DB) con Forza Kit",
+        "Nesting barre e lamiere: DXF, materiali dalle anagrafiche, taglio di stacco, riporta sul preventivo",
+        "Utenti e gruppi con permessi: costi e prezzi nascosti per profilo, login autonomo",
+        "Email con template e allegati via Office Automation, GV Integrator M365, Notification Hub o SMTP",
+        "Assistente AI integrato con ticket verso l'assistenza GV",
+        "Analisi disegni, integrazione VIES, Synx MES e Concept ERP",
+        "Database proprio: funziona anche in modalità autonoma"
       ]
     },
     {
       "id": "officeautomation",
       "nome": "Office Automation",
       "descrizione": "Automazione processi documentali e ufficio",
-      "versione": "1.40.1",
+      "versione": "1.46.0",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Description",
@@ -203,7 +237,7 @@
       "id": "gv_insighthub",
       "nome": "GV InsightHub",
       "descrizione": "Dashboard KPI, pivot interattive e analisi dati su Vendite, Acquisti e Produzione da Concept ERP.",
-      "versione": "1.19.5",
+      "versione": "1.19.6",
       "autore": "GV Consulting",
       "categoria": "Business Intelligence",
       "icona": "BarChart",
@@ -434,7 +468,7 @@
       "id": "mes_integrator",
       "nome": "MES Integrator",
       "descrizione": "MES produzione Ã¢â‚¬â€ gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "2.134.0",
+      "versione": "2.154.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
@@ -450,7 +484,9 @@
         "env_extra": [
           "MES_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database=GV_MesIntegrator;User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
           "MT_CONNECTION_STRING=Server={DB_HOST},{DB_PORT};Database={slug};User Id=sa;Password={DB_PASS};TrustServerCertificate=True",
-          "MES_SECRET_KEY={env:MES_SECRET_KEY}"
+          "MES_SECRET_KEY={env:MES_SECRET_KEY}",
+          "WMS_URL={env:WMS_URL}",
+          "WMS_API_KEY={env:WMS_API_KEY}"
         ]
       },
       "funzionalita": [
@@ -468,7 +504,7 @@
       "id": "notification",
       "nome": "GV NotificationHub",
       "descrizione": "Hub di notifiche per l'ecosistema GV: alert da moduli e connettori verso Telegram, email (SMTP/Graph), Teams e Slack, email dirette, storico su SQL Server e scheduler notifiche Concept (stored XSN_*).",
-      "versione": "1.1.19",
+      "versione": "1.1.20",
       "autore": "GV Consulting",
       "categoria": "Produttivita",
       "icona": "Notifications",
@@ -490,7 +526,7 @@
         "Scheduler notifiche Concept: esecuzione stored XSN_* a giri o orari fissi",
         "Configuratore notifiche Concept via API /api/concept/*"
       ],
-      "aggiornato_il": "2026-08-30"
+      "aggiornato_il": "2026-09-26"
     },
     {
       "id": "gv_productionhub",
@@ -568,7 +604,7 @@
       "id": "prosys_hub",
       "nome": "GV ProSysHub",
       "descrizione": "Riservato Profilsystem: dichiarazione delle fasi a bordo della linea Eurogroup P600 via OPC UA, pesata e chiusura dei colli, generazione dei DDT provvisori in Concept ERP, scarti di setup del coil.",
-      "versione": "0.1.2",
+      "versione": "0.1.3",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
@@ -603,7 +639,7 @@
         "Login operatore di linea e token di postazione per il pannello WinCC, senza account GV personale",
         "Dashboard macchine con stato della linea e dei poller"
       ],
-      "aggiornato_il": "2026-09-20"
+      "aggiornato_il": "2026-09-26"
     },
     {
       "id": "sdi_filter",
@@ -637,6 +673,34 @@
         "La cartella di origine non si tocca: niente spostamenti, niente rinomine, nessun file marcatore"
       ],
       "aggiornato_il": "2026-09-21"
+    },
+    {
+      "id": "import_concept",
+      "nome": "Import Concept",
+      "descrizione": "Importazione anagrafiche articoli in Concept (lamiere, tubolari/profili, standard) da Excel o da altri moduli GV, con regole di codifica configurabili per azienda. Si attiva quando serve e si spegne a lavoro finito.",
+      "versione": "1.0.0",
+      "autore": "GV Consulting",
+      "categoria": "Produzione",
+      "icona": "Inventory2",
+      "porta_default": 5223,
+      "url_health_local": "http://localhost:5223",
+      "url_repo": "https://github.com/GV-CONSULTING-SRL/GV_ImportConcept",
+      "dipendenze": [],
+      "deploy": {
+        "service_name": "GV-ImportConcept",
+        "repo_name": "GV_ImportConcept",
+        "proj_path": "ImportConcept",
+        "exe_name": "ImportConcept.exe"
+      },
+      "funzionalita": [
+        "Fonte dati Excel/CSV (file caricato o percorso fisso) oppure un altro modulo GV (es. Connettore Passepartout)",
+        "Destinazione per profilo: azienda, database Concept e prefisso tabelle",
+        "Regole di codifica per tipo con template a token o editor a segmenti, prefisso attivabile",
+        "Lamiere, tubolari/profili (con TAB_MAT e TAB_PRF) e articoli standard",
+        "Simulazione: cosa verrebbe scritto, tabella per tabella, senza toccare Concept",
+        "Scrittura selettiva delle righe scelte, idempotente, con storico riga per riga"
+      ],
+      "aggiornato_il": "2026-09-26"
     }
   ]
 }
