@@ -1,7 +1,7 @@
 ﻿{
   "versione": "1.0.0",
-  "versione_framework": "1.135.0",
-  "aggiornato_il": "2026-09-28",
+  "versione_framework": "1.141.0",
+  "aggiornato_il": "2026-09-29",
   "moduli": [
     {
       "id": "warehub",
@@ -119,7 +119,7 @@
       "id": "salvagnini_ops",
       "nome": "Salvagnini OPS",
       "descrizione": "Elabora i file XML prodotti dalla macchina Salvagnini, raggruppa per order_code e genera file OPS per il software di nesting.",
-      "versione": "2.27.0",
+      "versione": "2.28.2",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "Receipt",
@@ -147,7 +147,7 @@
       "id": "speedcost",
       "nome": "SpeedCost",
       "descrizione": "Preventivazione carpenteria metallica. Calcolo costi materiali, fasi interne/esterne, accessori e margini con formule personalizzabili.",
-      "versione": "1.5.0",
+      "versione": "1.5.1",
       "autore": "GV Consulting",
       "categoria": "Commerciale",
       "icona": "Calculate",
@@ -166,6 +166,7 @@
       },
       "funzionalita": [
         "Preventivi carpenteria metallica con calcolo costi riga come SpeedCost 4D",
+        "Dati di esempio caricati al primo avvio (rimovibili) e codici cliente/fornitore automatici",
         "Materie prime: lamiere, tubolari, profili, inox con extra, sfridi e recupero; misure in mm",
         "Listini a scaglioni, prezzi inox, prodotti finiti, Smart Form e stati 4D con causali di perdita",
         "Lavorazioni interne ed esterne, analitica tempi da SigmaNEST (file o DB) con Forza Kit",
@@ -468,7 +469,7 @@
       "id": "mes_integrator",
       "nome": "MES Integrator",
       "descrizione": "MES produzione Ã¢â‚¬â€ gestione piani di lavoro, rilevamenti, riconciliazione fasi condivise. Sostituisce il web client Concept MES risolvendo il bug di propagazione su fasi condivise.",
-      "versione": "2.154.0",
+      "versione": "2.160.0",
       "autore": "GV Consulting",
       "categoria": "Produzione",
       "icona": "PrecisionManufacturing",
